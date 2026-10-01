@@ -24,16 +24,3 @@ function clickear(x, y, w, h, pantalladestino) {
     pantalla = pantalladestino;
   }
 }
-
-function cargarAccion(nombre, cantidad) {
-  let frames = [];
-  for (let i = 0; i < cantidad; i++) {
-    frames.push(loadImage("data/" + nombre + i + ".png"));
-  }
-  return frames;  
-}
-
-function elegirFrame(frames, velocidadAnimacion) {
-  let indice = floor(frameCount / velocidadAnimacion) % frames.length;
-  return frames[indice];
-}

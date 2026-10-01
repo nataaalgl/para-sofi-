@@ -1,8 +1,5 @@
-let acciones = [];
-let accionActual = 0;
 let pantalla = 0;
 let imagenes = [];
-let animacion = [];
 let mistextos = [];
 let botoncont;
 let botoninicio;
@@ -15,17 +12,6 @@ let abrirpaquete;
 let caminoescondido;
 let caminoarriba;
 let caminopuente;
-let fondo;
-let x = 0;
-let xR = 0;
-let fondoX = 0;
-let fondoVel = 1.7;
-let fondoStop = false;
-
-const NOMBRES = ["ruedas"];
-const FRAMES_POR_ACCION = [3];
-const NUBES_IMG = ["0", "1", "2"]
-let nubes = []
 
 function setup() {
   createCanvas(800, 450);
@@ -40,7 +26,6 @@ function setup() {
 }
 
 function draw() {
-  console.log("x " + mouseX + "  | Y " + mouseY)
   background(25);
 
   if (pantalla === 0) pantallaInicio();
