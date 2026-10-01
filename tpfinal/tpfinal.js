@@ -17,9 +17,15 @@ let caminoarriba;
 let caminopuente;
 let fondo;
 let x = 0;
+let xR = 0;
+let fondoX = 0;
+let fondoVel = 1.7;
+let fondoStop = false;
 
 const NOMBRES = ["ruedas"];
 const FRAMES_POR_ACCION = [3];
+const NUBES_IMG = ["0", "1", "2"]
+let nubes = []
 
 function setup() {
   createCanvas(800, 450);

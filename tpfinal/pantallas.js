@@ -1,20 +1,32 @@
 function pantallaInicio() {
   background(102, 213, 234); // Gris claro
 
+
   image(fondo, x, 160, fondo.width*2, fondo.height*2);
   
     if (accionActual === 0) {
 } 
   
-  
-  
-  
     let frames = acciones[accionActual];
   let frame = elegirFrame(frames, 3);
   let frameRuedas = elegirFrame(acciones[0], 6);
- image(frameRuedas, x, 400, frameRuedas.width*2, frameRuedas.height * 2);
+ image(frameRuedas, xR, 400, frameRuedas.width*2, frameRuedas.height * 2);
 
+if (x >= - 2000 && xR >= -2000){
+  x -= fondoVel;
+  xR -= fondoVel;
+  
+} 
+ 
+ image(nubes[0], 130, 61, nubes[0].width*2, nubes[0].height * 2); 
+/*  if (fondoStop) {
+    fondoX + fondoVel;
+    if (fondoX <= 1200) {
+      fondoX = 0;
+    }
+  }
 
+*/
 
   if (mouseEnBoton(260, 325, 280, 70)) {
     tint(255, 255);
@@ -62,7 +74,7 @@ function pantalla2() {
   // al pasar el mouse por el paquete:
   if (mouseX > 180 && mouseX < 500 && mouseY > 230 && mouseY < 380) {
     image(abrirpaquete, 0, 0, width, height);
-        fill(255, 230, 140);
+        fill(178, 255, 254);
     textSize(15);
     textAlign(CENTER, BOTTOM);
     text("Abrir el paquete", width / 2, height - 15);fill(255);
@@ -98,7 +110,7 @@ function pantalla3() {
   if (mouseX > 410 && mouseX < 624 && mouseY > 120 && mouseY < 307) {
     image(siInvestigar, 0, 0, width, height);
     // aparece un texto que te explica qué pasa si elegís esa opción (qué significa hacer click ahí). Opción 1: catacumbas, la historia continúa.
-    fill(255, 230, 140);
+    fill(178, 255, 254);
     textSize(15);
     textAlign(CENTER, BOTTOM);
     text("Ir hacia las catacumbas", width / 2, height - 15);
@@ -107,7 +119,7 @@ function pantalla3() {
   else if (mouseX > 650 && mouseX < 790 && mouseY > 173 && mouseY < 292) {
     image(noInvestigar, 0, 0, width, height);
     // texto explicativo de la opcion cerrar el diario. Opción 2: no investigar. Primer final!! Los nazis te roban el grial y el nombre de tu padre queda manchado. Todo el mundo cree que participó en el robo.
-    fill(255, 230, 140);
+    fill(178, 255, 254);
     textSize(15);
     textAlign(CENTER, BOTTOM);
     text("Cerrar el diario y no investigar", width / 2, height - 15);

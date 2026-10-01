@@ -5,7 +5,7 @@ function preload() {
   }
   //CARGA DE TEXOS!! Funciona como un arreglo de imagenes, para invocar jahay que escribir: text(mistextos[numero de linea que quiero llamar], width / 2, 35, 650, 60); HAY QUE IR AGREGANDO LOS TEXTOS AL ARCHIVO "dialogos.txt" SEPARAR CADA ORACIÓN CON UN ENTER.
 mistextos = loadStrings("data/dialogos.txt");
-  
+ 
   //imagenes otras
   botoncont = loadImage("data/boton1.png");
   botoninicio = loadImage("data/botoniniciar.png");
@@ -23,5 +23,10 @@ mistextos = loadStrings("data/dialogos.txt");
   for (let a = 0; a < NOMBRES.length; a++) {
     acciones.push(cargarAccion(NOMBRES[a], FRAMES_POR_ACCION[a]));
   }
+
+for (let i = 0; i < NUBES_IMG.length; i++) {
+  nubes.push(loadImage("data/nube" + NUBES_IMG[i] + ".png"));
+}
+
 
 }
